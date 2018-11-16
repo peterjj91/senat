@@ -1,0 +1,90 @@
+// В этом файле должны быть стили для БЭМ-блока main-slider, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.main-slider {
+
+  $block-name:                &; // #{$block-name}__element {}
+  height: 490px;
+  overflow: hidden;
+  border-bottom: 1px solid #f1f1f1;
+
+  @media(max-width: $screen-lg){
+    height: 300px;
+  }
+
+  .slick-list {
+    height: 100%;
+  }
+
+  .slick-track {
+    height: 100%;
+  }
+
+  .slick-dots {
+    bottom: 66px;
+
+    @media(max-width: $screen-lg){
+      bottom: 20px;
+    }
+  }
+
+  .slick-slide {
+    height: 100%;
+
+    & > * {
+      height: 100%;
+    }
+  }
+
+  .slick-arrow {
+    @media(max-width: 575px){
+      display: none !important;
+    }
+  }
+
+  .container {
+    height: 100%;
+    margin: 0 auto;
+    display: block !important;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0px -15px;
+
+    @media(max-width: $screen-lg){
+      margin: 0;
+    }
+  }
+
+  &__img {
+    flex: 0 0 576px;
+    height: 100%;
+    padding: 0px 10px;
+
+    @media(max-width: $screen-lg){
+      display: none;
+    }
+
+    img {
+
+    }
+  }
+
+  &__content {
+    padding-left: 6px;
+    padding-right: 115px;
+
+    @media(max-width: $screen-xl){
+      padding-right: 0;
+    }
+  }
+
+  .head-h1, h1 {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+}

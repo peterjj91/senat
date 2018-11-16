@@ -1,0 +1,30 @@
+// В этом файле должны быть стили для БЭМ-блока promo-link, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.promo-link {
+
+  $block-name:                &; // #{$block-name}__element {}
+  font-size: 18px;
+  color: $color-main--gold;
+  font-weight: 100;
+  position: relative;
+
+  &:hover, &:focus {
+    color: $color-main--gold;
+    text-decoration: none;
+  }
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 11px;
+    height: 15px;
+    vertical-align: top;
+    margin-top: 5px;
+    background-image: url(../img/direction-gold.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(-1);
+  }
+}

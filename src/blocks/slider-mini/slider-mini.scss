@@ -1,0 +1,71 @@
+// В этом файле должны быть стили для БЭМ-блока slider-mini, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.slider-mini {
+
+  $block-name:                &; // #{$block-name}__element {}
+  height: 360px;
+  overflow: hidden;
+
+  @media(max-width: $screen-lg){
+    height: 260px;
+  }
+
+  &__block {
+    display: flex !important;
+    align-items: center;
+    padding: 0px 35px;
+
+    @media(max-width: $screen-md){
+      padding: 20px 20px;
+    }
+  }
+
+  &__img {
+    //height: 100%;
+    margin-right: 20px;
+    max-width: 200px;
+
+    @media(max-width: $screen-xl){
+      max-width: 180px;
+    }
+    @media(max-width: $screen-md){
+      display: none;
+    }
+
+    & + #{$block-name}__description {
+      text-align: right;
+
+      @media(max-width: $screen-md){
+        text-align: center;
+      }
+    }
+  }
+
+  .slick-list {
+    height: 100%;
+  }
+
+  .slick-track {
+    height: 100%;
+  }
+
+  .slick-slide {
+    & > * {
+      height: 100%;
+    }
+  }
+
+  &__block {
+    height: 100%;
+  }
+
+  .slick-arrow {
+    display: none !important;
+  }
+
+  .slick-dots {
+    bottom: 13px;
+  }
+}

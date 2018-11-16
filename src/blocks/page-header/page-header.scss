@@ -1,0 +1,177 @@
+// В этом файле должны быть стили только для БЭМ-блока page-header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Не пишите здесь другие селекторы.
+
+.page-header {
+  $block-name: &;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -43px;
+    background-image: url(../img/header-shadow.png);
+    height: 43px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__container {
+    @extend .container;
+
+    @media (min-width: $screen-lg) {
+
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__top {
+    #{$block-name} {
+      &__inner {
+        height: 139px;
+
+        @media(max-width: $screen-lg){
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @media(max-width: $screen-lg){
+      display: block;
+    }
+  }
+
+  &__bottom {
+    @media(max-width: $screen-lg){
+      display: none;
+    }
+  }
+
+  &__social {
+
+  }
+
+  &__description {
+    flex: 1;
+
+    @media(max-width: $screen-lg){
+      display: none;
+    }
+  }
+
+  &__logo {
+    flex: 1;
+    text-align: center;
+
+    @media(max-width: $screen-lg){
+      flex: none;
+    }
+  }
+
+  .logo {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__info {
+    flex: 1;
+    text-align: right;
+
+    @media(max-width: $screen-lg){
+      display: none;
+    }
+  }
+
+  &__search {
+    margin-bottom: 7px;
+
+    .input {
+      width: 190px;
+    }
+  }
+
+  &__tel {
+    font-size: 18px;
+    color: $gray-darkest;
+
+    &:hover, &:focus {
+      color: $gray-darkest;
+      text-decoration: none;
+    }
+  }
+
+  &__bottom {
+    height: 60px;
+    border-top: 1px solid #f1f1f1;
+    //padding: 16px 0px 16px 0px;
+
+    @media(max-width: $screen-xl){
+      height: 50px;
+    }
+  }
+  
+  .main-nav {
+    float: left;
+  }
+
+  &__card {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 14px 0px;
+    font-size: 18px;
+
+    @media(max-width: $screen-xl){
+      padding: 13px 0px;
+      font-size: 15px;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      color: $gray-darkest;
+      text-transform: uppercase;
+
+      &:hover, &:focus {
+        color: $color-main--gold;
+        text-decoration: none;
+
+        & > * {
+          fill: $color-main--gold;
+        }
+      }
+
+      sup {
+        font-size: 12px;
+        margin-left: -2px;
+      }
+    }
+
+    &__icon {
+      vertical-align: middle;
+    }
+
+    &__text {
+      vertical-align: middle;
+    }
+  }
+
+}

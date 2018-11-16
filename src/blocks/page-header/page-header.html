@@ -1,0 +1,94 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/page-header/page-header.html')
+
+-->
+<header class="page-header" role="banner">
+    <div class="page-header__top">
+        <div class="page-header__container">
+            <div class="page-header__inner">
+                <div class="page-header__description">
+                    <div class="page-header__search">
+                        <input type="text" placeholder="Быстрый поиск . . ." class="input input__search">
+                    </div>
+
+                    @@include('../location/location.html')
+                </div>
+
+                <div class="page-header__logo">
+                    <a href="#">@@include('../logo/logo.html')</a>
+                </div>
+
+                <div class="page-header__info">
+                    <a href="tel:+88312808202" class="page-header__tel">8 (831) 2-808-202</a>
+
+                    <div class="page-header__social">
+                        <ul class="share-social">
+                            <li>
+                                <a href="#">
+                                    <svg width="16px" height="24px" fill="rgb(255, 255, 255)" stroke="rgb(153, 153, 153)">
+                                        <use xlink:href="img/sprite-svg.svg#fb"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg width="24px" height="20px" stroke="rgb(153, 153, 153)" fill="rgb(255, 255, 255)">
+                                        <use xlink:href="img/sprite-svg.svg#youtube"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg width="26px" height="16px" fill="rgb(255, 255, 255)" stroke="rgb(153, 153, 153)">
+                                        <use xlink:href="img/sprite-svg.svg#vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg width="18px" height="17px" stroke="rgb(153, 153, 153)" fill="rgb(194, 194, 194)">
+                                        <use xlink:href="img/sprite-svg.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="page-header__burger">
+                  <span class="burger" id="right-menu" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse">
+                      <span></span>
+                  </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="page-header__bottom">
+        <div class="page-header__container">
+            @@include('../main-nav/main-nav.html')
+
+            <ul class="page-header__card">
+                <li>
+                    <a href="#">
+                        <svg width="16px" height="19px" class="page-header__card__icon">
+                            <use xlink:href="img/sprite-svg.svg#star"></use>
+                        </svg>
+                        <span class="page-header__card__text">Избранное <sup>7</sup></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg width="17px" height="14px" class="page-header__card__icon">
+                            <use xlink:href="img/sprite-svg.svg#diamand"></use>
+                        </svg>
+                        <span class="page-header__card__text">Корзина <sup>13</sup></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

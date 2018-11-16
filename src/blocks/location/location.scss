@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока location, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.location {
+
+  $block-name:                &; // #{$block-name}__element {}
+  padding: 0px 11px;
+  font-size: 14px;
+
+  &__name {
+    color: $gray-darkest;
+    border-bottom: 1px dotted $gray-darkest;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      color: $gray-darkest;
+      text-decoration: none;
+    }
+  }
+}
