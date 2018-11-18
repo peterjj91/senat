@@ -928,13 +928,12 @@ $container-lg:                100%;
 $container-xl:                100%;
 $container-xxl:               $screen-xxl - 30;
 
-
+$breadcrumb-divider: quote(">");
 
 // Модульная сетка
 
 $grid-columns:                24;
 $grid-gutter-width:           30px;
-
 
 
 // Разное

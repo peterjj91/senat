@@ -154,7 +154,7 @@ demo-block/               # Папка блока
 "addJsBefore": [
   "./node_modules/jquery/dist/jquery.min.js",
   "./node_modules/jquery-migrate/dist/jquery-migrate.min.js",
-  "./node_modules/nouislider/distribute/nouislider.js"
+  "./node_modules/nouislider/distribute/range-slider.js"
 ],
 ```
 

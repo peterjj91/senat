@@ -7,7 +7,7 @@
     "logo": [],
     "btn": [],
     "btn-group": [],
-    "breadcrumbs": [],
+    "breadcrumb": [],
     "table": [],
     "sprite-svg": [],
     "form": [],
@@ -28,23 +28,33 @@
     "promo-link": [],
     "promotion": [],
     "slider-brand": [],
-    "sidr": []
+    "sidr": [],
+    "catalog": [],
+    "range-slider": [],
+    "ion-rangeslider": [],
+    "brand-check": [],
+    "bootstrap-select": [],
+    "popper": []
   },
   "addCssBefore": [
     "./node_modules/bootstrap/scss/bootstrap.scss",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
-    "../../node_modules/slick-carousel/slick/slick.scss"
+    "../../node_modules/slick-carousel/slick/slick.scss",
+    "../../node_modules/bootstrap-select/sass/bootstrap-select.scss"
   ],
   "addCssAfter": [],
   "singleCompiled": [],
   "addJsBefore": [
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
+    "./node_modules/popper.js/dist/umd/popper.js",
     "./node_modules/bootstrap/dist/js/bootstrap.js",
     "./node_modules/object-fit-images/dist/ofi.js",
     "./node_modules/slick-carousel/slick/slick.js",
-    "./node_modules/sidr/dist/jquery.sidr.js"
+    "./node_modules/sidr/dist/jquery.sidr.js",
+    "./node_modules/ion-rangeslider/js/ion.rangeSlider.js",
+    "./node_modules/bootstrap-select/dist/js/bootstrap-select.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

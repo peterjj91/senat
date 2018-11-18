@@ -1,0 +1,69 @@
+// В этом файле должны быть стили для БЭМ-блока bootstrap-select, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.bootstrap-select {
+
+  $block-name:                &; // #{$block-name}__element {}
+  outline: none !important;
+
+  .dropdown-toggle {
+    //padding: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #333333 !important;
+    padding-right: 0;
+
+    @media(max-width: $screen-md){
+      padding-left: 0;
+    }
+
+    &:after {
+      content: "";
+      border: none;
+      transform: rotate(-90deg);
+      margin-top: 5px;
+      margin-right: 3px;
+      background-image: url(../img/direction.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 7px;
+      height: 13px;
+    }
+
+    &:focus {
+      outline: none !important;
+      background-color: transparent;
+    }
+
+    &:active {
+      background-color: transparent !important;
+    }
+
+    .filter-option {
+
+      @media(min-width: $screen-md){
+        text-align: right;
+      }
+
+      &-inner {
+        padding-right: 17px;
+
+        &-inner {
+          display: inline-block;
+          border-bottom: 1px dotted #333333;
+        }
+      }
+    }
+  }
+
+  &.show {
+    .dropdown-toggle {
+      background-color: transparent;
+      outline: none !important;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+// В этом файле должны быть стили для БЭМ-блока brand-check, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.brand-check {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+}
+
+
+.brand-check__group {
+  @include make-row;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+.brand-check {
+  @include make-col(8);
+  height: 56px;
+  margin: 0;
+  padding: 0px 2px;
+  margin-bottom: 2px;
+  position: relative;
+  cursor: pointer;
+
+  &__block {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid #ecf0f1;
+  }
+
+  &__img {
+    width: auto;
+    max-width: 54px;
+    margin: 0 auto;
+  }
+}
+.brand-check input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.brand-check__block {
+  //position: absolute;
+  //top: 2px;
+  //left: 0;
+  //height: 20px;
+  //width: 20px;
+  //background: white;
+  //border: 1px solid #f1f1f1;
+  //border-radius: 3px;
+}
+.brand-check--radio .brand-check__block {
+  border-radius: 50%;
+}
+.brand-check:hover input ~ .brand-check__block,
+.brand-check input:focus ~ .brand-check__block {
+  background-color: white;
+}
+.brand-check input:checked ~ .brand-check__block {
+  background: #f0f3f4;
+}
+.brand-check:hover input:not([disabled]):checked ~ .brand-check__block,
+.brand-check input:checked:focus ~ .brand-check__block {
+  background: #f0f3f4;
+}
+.brand-check input:disabled ~ .brand-check__block {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.brand-check__block:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.brand-check input:checked ~ .brand-check__block:after {
+  display: block;
+}
+.brand-check--checkbox .brand-check__block:after {
+  //left: 7px;
+  //top: 1px;
+  //width: 5px;
+  //height: 12px;
+  //border: solid #c39329;
+  //border-width: 0 2px 2px 0;
+  //transform: rotate(45deg);
+}
+.brand-check--checkbox input:disabled ~ .brand-check__block:after {
+  border-color: #7b7b7b;
+}
+.brand-check--radio .brand-check__block:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.brand-check--radio input:disabled ~ .brand-check__block:after {
+  background: #7b7b7b;
+}

@@ -1,0 +1,112 @@
+// В этом файле должны быть стили для БЭМ-блока range-slider, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.range-slider {
+
+  $block-name:                &; // #{$block-name}__element {}
+  border: none;
+  height: 54px;
+  //font-family: $font-family;
+  //margin-top: 16px;
+
+  & > .irs {
+    padding: 0px 5px;
+    margin: 0px -5px;
+    height: 54px;
+  }
+
+  .irs-min, .irs-max {
+    background-color: transparent;
+    padding: 0;
+    font-size: 16px;
+    line-height: normal;
+    color: #666666;
+    letter-spacing: -1px;
+  }
+
+  .irs-from, .irs-to, .irs-single {
+    background-color: transparent;
+    padding: 0;
+    font-size: 16px;
+    line-height: normal;
+    color: #666666;
+    letter-spacing: -1px;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .irs-min {
+    left: 0 !important;
+    //margin-left: 13px;
+  }
+
+  .irs-max {
+    right: 0 !important;
+  }
+
+  .irs-from {
+    right: auto !important;
+    left: 0 !important;
+  }
+
+  .irs-to {
+    left: auto !important;
+    right: 0 !important;
+  }
+
+  .irs-line {
+    height: 10px;
+    top: 23px;
+  }
+
+  .irs-bar {
+    background: #c69833;
+    height: 10px;
+    top: 23px;
+  }
+
+  .irs-slider {
+    top: 34px;
+    width: 9px;
+    height: 20px;
+    background-image: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 9px;
+      height: 20px;
+      background-image: url("../img/slider-pointer.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &.from {
+      margin-left: 5px;
+    }
+
+    &.to {
+      margin-left: -4px;
+
+      &:before {
+        transform: scale(-1,1);
+      }
+    }
+  }
+
+  .irs-line {
+    & > * {
+      background-image: none;
+      background-color: #e8e8e8;
+    }
+  }
+
+}

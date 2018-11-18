@@ -16,14 +16,11 @@
     height: 43px;
     width: 100%;
     z-index: 1;
+    pointer-events: none;
   }
 
   &__container {
     @extend .container;
-
-    @media (min-width: $screen-lg) {
-
-    }
   }
 
   &__inner {

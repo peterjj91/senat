@@ -1,0 +1,210 @@
+// В этом файле должны быть стили для БЭМ-блока catalog, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.catalog {
+
+  $block-name:                &; // #{$block-name}__element {}
+  display: block;
+  padding-bottom: 37px;
+
+  @media(min-width: $screen-lg+1){
+    display: flex;
+    align-items: end;
+  }
+
+  &__mobile-nav {
+    display: inline-block;
+    width: 100%;
+
+    @media(min-width: $screen-md+1){
+      width: auto;
+    }
+    @media(min-width: $screen-lg+1){
+      display: none;
+    }
+
+
+    .btn {
+      padding: 6px 0px 0px 0px;
+      border: none;
+      border-bottom: 1px dotted;
+      background-color: transparent;
+      outline: none !important;
+      box-shadow: none;
+      font-size: 15px;
+      color: #333333 !important;
+
+      @media(max-width: $screen-md){
+        padding-bottom: 6px;
+      }
+    }
+  }
+
+  &__side {
+    position: absolute;
+    z-index: 2;
+
+    @media(min-width: $screen-lg){
+      top: auto;
+      width: auto;
+      position: relative;
+      display: block !important;
+      flex: 0 0 255px;
+      margin-right: 30px;
+    }
+    @media(min-width: $screen-md){
+      width: 930px;
+      top: 65px;
+    }
+    @media(max-width: 991px){
+      width: 690px;
+    }
+    @media(max-width: $screen-md - 1){
+      width: 510px;
+      top: 90px;
+    }
+    @media(max-width: 576px){
+      width: 100%;
+      left: 0px;
+      padding: 0px 15px;
+    }
+
+    &__content {
+      background-color: #fff;
+      box-shadow: 0px 0px 50px 0px rgba(116, 116, 116, 0.2);
+      padding: 14px 20px 23px 20px;
+
+      @media(max-width: $screen-lg){
+
+      }
+    }
+
+    &__title {
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #666666;
+      margin-bottom: 8px;
+    }
+
+    &__slider {
+      margin-bottom: 17px;
+    }
+
+    &__block {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .control {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+
+    &__title {
+      @media(min-width: $screen-md+1){
+        margin-bottom: 10px;
+      }
+      @media(min-width: $screen-lg+1){
+        margin-top: -11px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__nav {
+      margin-bottom: 27px;
+
+      @media(min-width: $screen-md+1){
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .bootstrap-select {
+        @media(max-width: $screen-md){
+          width: 100% !important;
+        }
+      }
+    }
+
+    &__more {
+      margin-top: 40px;
+      padding-bottom: 12px;
+      position: relative;
+      text-align: center;
+      font-size: 15px;
+      color: #333333;
+
+      @media(min-width: $screen-md){
+        margin-top: -15px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        //transform: translate(-50%, -50%);
+        bottom: 0;
+        left: 50%;
+        margin-left: -4px;
+        transform: rotate(-90deg);
+        background-image: url(../img/direction.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 7px;
+        height: 13px;
+      }
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__sort {
+
+    @media(min-width: $screen-lg+1){
+      margin-top: -11px;
+    }
+
+    & > * {
+      vertical-align: top;
+    }
+  }
+
+  &__item {
+    @include make-row;
+
+    &__block {
+      @include make-col(24);
+      padding: 0px 15px !important;
+      margin-bottom: 62px;
+
+      @media(min-width: $screen-sm){
+        @include make-col(12);
+      }
+      @media(min-width: $screen-md){
+        @include make-col(8);
+      }
+      @media(min-width: $screen-lg){
+        @include make-col(8);
+      }
+      @media(min-width: $screen-xl){
+        //@include make-col(8);
+      }
+      @media(max-width: $screen-lg) {
+        margin-bottom: 20px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

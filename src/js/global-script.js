@@ -5,6 +5,11 @@ $( document ).ready(function() {
 });
 
 $(document).ready(function() {
+    $('select').selectpicker();
+});
+
+
+$(document).ready(function() {
     $('#right-menu').sidr({
         name: 'sidr-right',
         side: 'right',
@@ -26,3 +31,5 @@ $(document).mouseup(function (e){
         $.sidr('close', 'sidr-right');
     }
 });
+
+

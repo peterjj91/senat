@@ -8,6 +8,7 @@
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
 @import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/bootstrap-select/sass/bootstrap-select.scss';
 @import './src/blocks/page/page.scss';
 @import './src/blocks/typo/typo.scss';
 @import './src/blocks/page-header/page-header.scss';
@@ -15,7 +16,7 @@
 @import './src/blocks/logo/logo.scss';
 @import './src/blocks/btn/btn.scss';
 @import './src/blocks/btn-group/btn-group.scss';
-@import './src/blocks/breadcrumbs/breadcrumbs.scss';
+@import './src/blocks/breadcrumb/breadcrumb.scss';
 @import './src/blocks/table/table.scss';
 @import './src/blocks/sprite-svg/sprite-svg.scss';
 @import './src/blocks/form/form.scss';
@@ -37,3 +38,9 @@
 @import './src/blocks/promotion/promotion.scss';
 @import './src/blocks/slider-brand/slider-brand.scss';
 @import './src/blocks/sidr/sidr.scss';
+@import './src/blocks/catalog/catalog.scss';
+@import './src/blocks/range-slider/range-slider.scss';
+@import './src/blocks/ion-rangeslider/ion-rangeslider.scss';
+@import './src/blocks/brand-check/brand-check.scss';
+@import './src/blocks/bootstrap-select/bootstrap-select.scss';
+@import './src/blocks/popper/popper.scss';
