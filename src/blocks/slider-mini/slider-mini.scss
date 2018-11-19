@@ -68,4 +68,18 @@
   .slick-dots {
     bottom: 13px;
   }
+
+  &__description {
+
+  }
+
+  &__title {
+    @extend .head-h1;
+    @extend .text--promo;
+
+    &:hover, &:focus {
+      @extend .text--promo;
+      text-decoration: none;
+    }
+  }
 }

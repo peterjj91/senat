@@ -1,9 +1,15 @@
-// В этом файле должны быть стили для БЭМ-блока popper, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока item-promo, его элементов, 
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-.popper {
+.item-promo {
 
   $block-name:                &; // #{$block-name}__element {}
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
 
 }

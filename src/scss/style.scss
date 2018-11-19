@@ -9,6 +9,7 @@
 @import './src/scss/mixins.scss';
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 @import '../../node_modules/bootstrap-select/sass/bootstrap-select.scss';
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css';
 @import './src/blocks/page/page.scss';
 @import './src/blocks/typo/typo.scss';
 @import './src/blocks/page-header/page-header.scss';
@@ -43,4 +44,7 @@
 @import './src/blocks/ion-rangeslider/ion-rangeslider.scss';
 @import './src/blocks/brand-check/brand-check.scss';
 @import './src/blocks/bootstrap-select/bootstrap-select.scss';
-@import './src/blocks/popper/popper.scss';
+@import './src/blocks/page-card/page-card.scss';
+@import './src/blocks/slider-card/slider-card.scss';
+@import './src/blocks/size-check/size-check.scss';
+@import './src/blocks/item-promo/item-promo.scss';

@@ -83,6 +83,16 @@
     }
   }
 
+  &__title {
+    @extend .head-h1;
+    @extend .text--promo;
+
+    &:hover, &:focus {
+      @extend .text--promo;
+      text-decoration: none;
+    }
+  }
+
   .head-h1, h1 {
     margin-bottom: 12px;
     text-transform: uppercase;

@@ -1,0 +1,208 @@
+// В этом файле должны быть стили для БЭМ-блока page-card, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-card {
+
+  $block-name: &; // #{$block-name}__element {}
+  margin-bottom: 30px;
+
+  @media(min-width: $screen-lg){
+    display: flex;
+    padding: 9px 0px 0px 0px;
+    margin-bottom: 14px;
+  }
+
+  &__slider {
+    margin: 0px -15px 30px -15px;
+
+    @media(min-width: $screen-lg){
+      display: flex;
+      flex-direction: row-reverse;
+      margin: 0;
+      margin-right: 29px;
+    }
+
+
+    &__main {
+      margin-bottom: 30px;
+
+      @media(min-width: $screen-lg){
+        margin-bottom: 0;
+      }
+    }
+
+    &__nav {
+
+
+      @media(min-width: $screen-lg){
+        width: 65px;
+        margin-right: 11px;
+      }
+    }
+  }
+
+  &__content {
+
+  }
+
+  &__info {
+    margin-bottom: 24px;
+
+    &:last-child {
+
+    }
+
+    &__group {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      #{$block-name} {
+        &__info {
+          width: 100%;
+
+          @media(min-width: $screen-xl){
+            width: 50%;
+          }
+
+          &:nth-child(even){
+
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 15px;
+      color: #666666;
+      margin-bottom: 3px;
+    }
+
+    .bootstrap-select--main {
+      width: 100% !important;
+    }
+  }
+
+  &__title {
+    @extend .head-h1;
+    line-height: 36px;
+    margin-top: -6px;
+    margin-bottom: 16px;
+  }
+
+  &__code {
+    font-size: 15px;
+    color: #666666;
+    margin-bottom: 3px;
+  }
+
+  &__price {
+
+
+    &__group {
+      display: flex;
+
+      & > * {
+        width: 50%;
+      }
+    }
+
+    p {
+      font-size: 15px;
+      color: #666666;
+      line-height: 18px;
+      margin-bottom: -7px;
+    }
+
+    &__title {
+      font-size: 30px;
+      color: $color-main--gold;
+
+      &:hover, &:focus {
+        color: $color-main--gold;
+        text-decoration: none;
+      }
+    }
+
+    &--old {
+      p {
+
+      }
+
+      #{$block-name} {
+        &__price {
+          &__title {
+            color: #333333;
+            text-decoration: line-through;
+            text-decoration-color: rgba(255, 0, 0, 0.9);
+          }
+        }
+      }
+    }
+  }
+
+  &__btn {
+    padding: 11px 13px 13px 13px;
+    fill: rgb(199, 155, 56);
+
+    &:hover, &:focus {
+      fill: white;
+    }
+
+    &--buy {
+      padding: 11px 10px 13px 10px;
+      min-width: 119px;
+    }
+
+    &__group {
+      display: flex;
+
+      .btn {
+        margin-right: 11px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px 0px 15px 0px;
+    padding: 15px 19px 20px 19px;
+    background: #f9f9f9;
+    font-size: 15px;
+
+    li {
+      width: 100%;
+      margin-bottom: 9px;
+
+      @media(min-width: $screen-xl){
+        width: 50%;
+      }
+    }
+
+    a {
+      color: #333333;
+      text-decoration: underline;
+      margin-left: 5px;
+
+      &:hover, &:focus {
+        color: #333333;
+      }
+    }
+  }
+
+  &__description {
+    p {
+      font-size: 15px;
+      line-height: 20px;
+      color: #666666;
+    }
+  }
+
+}

@@ -16,7 +16,7 @@
   &__container {
     display: none;
     @include make-container;
-    z-index: 2;
+    z-index: 4;
     position: absolute !important;
     margin: 0;
     margin-top: -1px !important;
@@ -83,6 +83,11 @@
 
     & > li {
       display: inline-block;
+      margin-right: 3px;
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       & > a {
         display: block;
