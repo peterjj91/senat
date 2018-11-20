@@ -1,5 +1,6 @@
 {
   "blocks": {
+    "default": [],
     "page": [],
     "typo": [],
     "page-header": [],
@@ -37,7 +38,10 @@
     "page-card": [],
     "slider-card": [],
     "size-check": [],
-    "item-promo": []
+    "item-promo": [],
+    "contact": [],
+    "nav-adress": [],
+    "scrollbar": []
   },
   "addCssBefore": [
     "./node_modules/bootstrap/scss/bootstrap.scss",
@@ -45,7 +49,8 @@
     "./src/scss/mixins.scss",
     "../../node_modules/slick-carousel/slick/slick.scss",
     "../../node_modules/bootstrap-select/sass/bootstrap-select.scss",
-    "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"
+    "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css",
+    "../../node_modules/perfect-scrollbar/css/perfect-scrollbar.css"
   ],
   "addCssAfter": [],
   "singleCompiled": [],
@@ -60,7 +65,8 @@
     "./node_modules/sidr/dist/jquery.sidr.js",
     "./node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "./node_modules/bootstrap-select/dist/js/bootstrap-select.js",
-    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js"
+    "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
+    "./node_modules/perfect-scrollbar/dist/perfect-scrollbar.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

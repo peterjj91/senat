@@ -1,0 +1,125 @@
+// В этом файле должны быть стили для БЭМ-блока nav-adress, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.nav-adress {
+
+  $block-name: &; // #{$block-name}__element {}
+  //display: flex;
+  //flex-direction: column;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 40px;
+    height: 50px;
+    background: linear-gradient(to top, white 30%, rgba(255, 255, 255, 0));
+  }
+
+  .nav-tabs {
+    border: none;
+    background-color: #f9f9f9;
+
+    @media(max-width: $screen-lg){
+      display: flex;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      overflow: scroll;
+    }
+
+    .nav-item {
+      margin-bottom: 0;
+    }
+
+    a {
+      font-size: 17px;
+      color: #333333;
+      padding: 15px 20px 15px 20px;
+      text-align: center;
+      border: none;
+      letter-spacing: -0.7px;
+      background-color: #f9f9f9;
+
+      @media(min-width: $screen-md){
+        padding: 23px 36px 21px 35px;
+      }
+    }
+  }
+
+  .tab-content {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    bottom: 0px;
+    padding: 0px 20px 20px 20px;
+
+    @media(min-width: $screen-md){
+      top: 100px;
+      padding: 0px 31px 20px 30px;
+    }
+
+    .tab-pane {
+      height: 100%;
+      position: relative;
+    }
+  }
+
+  &__item {
+    padding: 0;
+    padding-right: 10px;
+    list-style: none;
+    margin: 0;
+    line-height: normal;
+
+    &__link {
+      display: block;
+      color: #666666;
+      padding-bottom: 21px;
+      border-bottom: 1px solid #f1f1f1;
+      margin-bottom: 30px;
+
+      &:hover, &:focus {
+        color: #666666;
+        text-decoration: none;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: -3px;
+      margin-bottom: 7px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #666666;
+      margin-bottom: 2px;
+    }
+  }
+}
+
+
+//html,
+//body {
+//  height: 100%;
+//}
+//.page__content {
+//  display: flex;
+//  flex-direction: column;
+//  height: 100%;
+//}
+//.page__main-content {
+//  flex: 1 0 auto;
+//}
+//.page__footer-wrapper {
+//  flex: 0 0 auto;
+//}

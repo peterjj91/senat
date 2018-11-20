@@ -10,6 +10,8 @@
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 @import '../../node_modules/bootstrap-select/sass/bootstrap-select.scss';
 @import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css';
+@import '../../node_modules/perfect-scrollbar/css/perfect-scrollbar.css';
+@import './src/blocks/default/default.scss';
 @import './src/blocks/page/page.scss';
 @import './src/blocks/typo/typo.scss';
 @import './src/blocks/page-header/page-header.scss';
@@ -48,3 +50,6 @@
 @import './src/blocks/slider-card/slider-card.scss';
 @import './src/blocks/size-check/size-check.scss';
 @import './src/blocks/item-promo/item-promo.scss';
+@import './src/blocks/contact/contact.scss';
+@import './src/blocks/nav-adress/nav-adress.scss';
+@import './src/blocks/scrollbar/scrollbar.scss';

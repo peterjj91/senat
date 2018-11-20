@@ -1,0 +1,31 @@
+// В этом файле должны быть стили для БЭМ-блока scrollbar, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.scrollbar {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  &--adress {
+    position: relative;
+  }
+
+  .ps__rail-y {
+    opacity: 1;
+    width: 5px;
+    right: 10px !important;
+    border-radius: 0px;
+    background-color: #f9f9f9;
+
+    @media(min-width: $screen-md){
+      right: 32px !important;
+    }
+
+    .ps__thumb-y {
+      right: 0;
+      border-radius: 0px;
+      width: 100%;
+      background-color: #c79b38;
+    }
+  }
+}

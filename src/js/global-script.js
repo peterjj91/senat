@@ -104,3 +104,11 @@ $(document).ready(function() {
         }
     });
 });
+
+var ps = new PerfectScrollbar('.scrollbar');
+
+// (function($){
+//     $(window).on("load",function(){
+//         $(".scrollbar").mCustomScrollbar();
+//     });
+// })(jQuery);
