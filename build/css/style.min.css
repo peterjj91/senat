@@ -5423,7 +5423,8 @@ p {
     padding-right: 10px; }
 .page-footer__content p {
       font-size: 15px;
-      line-height: 20px; }
+      line-height: 20px;
+      display: none; }
 .page-footer .logo {
     margin-top: -3px; }
 .page-footer__nav {
@@ -9138,6 +9139,8 @@ p {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between; }
+        .page-footer__content p {
+          display: block; }
     .breadcrumb {
       margin-bottom: 24px; }
     .input {
