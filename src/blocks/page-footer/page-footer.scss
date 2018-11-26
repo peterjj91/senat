@@ -5,12 +5,14 @@
 .page-footer {
   $block-name: &;
   background-color: #f1f1f1;
-  padding: 51px 0px;
+  padding-top: 17px;
+  padding-bottom: 30px;
+  //text-align: center;
 
-  @media (max-width: $screen-lg) {
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+  @media(min-width: $screen-lg) {
+    //text-align: left;
+    padding-top: 51px;
+    padding-bottom: 51px;
   }
 
   &-wrapper {
@@ -19,12 +21,11 @@
 
   &__inner {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    //align-items: center;
+    display: block;
 
-    @media (max-width: $screen-lg) {
-      display: block;
+    @media (min-width: $screen-lg) {
+      display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -35,20 +36,18 @@
     padding-right: 10px;
 
     @media(max-width: $screen-lg){
+      display: flex;
+      flex-direction: column-reverse;
       width: 100%;
       max-width: 100%;
       padding-top: 0;
       padding-right: 0;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
     }
 
     p {
       font-size: 15px;
       line-height: 20px;
-
-      @media(max-width: $screen-lg){
-
-      }
     }
   }
 
@@ -56,7 +55,8 @@
     margin-top: -3px;
 
     @media(max-width: $screen-lg){
-      margin: 0 auto;
+      margin: 0;
+      margin-bottom: 20px;
     }
   }
 
@@ -118,9 +118,11 @@
 
       a {
         color: #333333;
-        text-decoration: underline;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(51, 51, 51, 0.5);
 
         &:hover, &:focus {
+          text-decoration: none;
           color: #333333;
         }
       }

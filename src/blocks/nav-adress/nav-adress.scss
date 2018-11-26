@@ -50,14 +50,15 @@
   }
 
   .tab-content {
-    position: absolute;
-    left: 0;
-    top: 70px;
-    width: 100%;
-    bottom: 0px;
-    padding: 0px 20px 20px 20px;
+    padding: 30px 20px 20px 20px;
+    max-height: 660px;
 
-    @media(min-width: $screen-md){
+    @media(min-width: $screen-lg){
+      max-height: none;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: 0px;
       top: 100px;
       padding: 0px 31px 20px 30px;
     }
@@ -96,7 +97,11 @@
       font-weight: bold;
       font-size: 16px;
       margin-top: -3px;
-      margin-bottom: 7px;
+      margin-bottom: 6px;
+
+      @media(min-width: $screen-lg){
+        margin-bottom: 7px;
+      }
     }
 
     p {
@@ -106,20 +111,3 @@
     }
   }
 }
-
-
-//html,
-//body {
-//  height: 100%;
-//}
-//.page__content {
-//  display: flex;
-//  flex-direction: column;
-//  height: 100%;
-//}
-//.page__main-content {
-//  flex: 1 0 auto;
-//}
-//.page__footer-wrapper {
-//  flex: 0 0 auto;
-//}

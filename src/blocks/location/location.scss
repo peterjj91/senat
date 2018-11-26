@@ -5,10 +5,16 @@
 .location {
 
   $block-name:                &; // #{$block-name}__element {}
-  padding: 0px 11px;
-  font-size: 14px;
+  //padding: 0px 11px;
+  white-space: nowrap;
+  font-size: 15px;
+
+  &__icon {
+    margin-right: 1px;
+  }
 
   &__name {
+    letter-spacing: -0.7px;
     color: $gray-darkest;
     border-bottom: 1px dotted $gray-darkest;
     cursor: pointer;

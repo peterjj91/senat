@@ -5,12 +5,17 @@
 .main-nav {
 
   $block-name:                &; // #{$block-name}__element {}
+  display: none;
   text-transform: uppercase;
   font-size: 18px;
-  margin-left: -14px;
+  padding: 0;
 
   @media(max-width: $screen-xl){
     font-size: 15px;
+  }
+  @media(min-width: $screen-lg){
+    display: block;
+    margin-left: -14px;
   }
 
   &__container {

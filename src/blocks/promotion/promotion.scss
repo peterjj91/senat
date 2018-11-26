@@ -6,16 +6,15 @@
 
   $block-name: &; // #{$block-name}__element {}
   background-color: #f6f6f6;
-  display: flex;
-  height: 360px;
   position: relative;
+  height: auto;
+  padding: 7px 20px 0px 20px;
 
-  @media(max-width: $screen-lg) {
-    height: 260px;
-  }
-  @media(max-width: $screen-md) {
-    height: auto !important;
+  @media(min-width: $screen-lg){
+    display: flex;
+    height: 360px;
     text-align: center;
+    padding: 0;
   }
 
   &:hover {
@@ -39,9 +38,20 @@
 
   &__img {
     align-self: center;
+    text-align: center;
 
-    @media(max-width: $screen-lg){
-      display: none;
+    @media(min-width: $screen-lg){
+      text-align: initial;
+    }
+
+    img {
+      width: 100%;
+      max-width: 300px;
+
+      @media(min-width: $screen-lg){
+        width: auto;
+        max-width: none;
+      }
     }
   }
 
@@ -52,7 +62,7 @@
   }
 
   &__description {
-
+    word-wrap: break-word;
   }
 
   &__total {
@@ -71,20 +81,18 @@
   &__title {
     @extend .head-h1;
     @extend .text--promo;
-    display: inline-block;
+    display: block;
+
+    @media(max-width: $screen-lg){
+      margin-bottom: 4px !important;
+    }
+    @media(min-width: $screen-md){
+      display: inline-block;
+    }
 
     &:hover, &:focus {
       @extend .text--promo;
       text-decoration: none;
-    }
-  }
-
-  &__title {
-    //color: #333333;
-
-    &:hover, &:focus {
-      //color: #333333;
-      //text-decoration: none;
     }
   }
 
@@ -154,14 +162,10 @@
   &--right {
     #{$block-name} {
       &__description {
-        padding: 80px 30px 30px 72px;
 
-        @media(max-width: $screen-lg) {
-          padding: 30px;
-        }
-        @media(max-width: $screen-md) {
-          padding: 20px;
-          text-align: center;
+        @media(min-width: $screen-lg) {
+          text-align: left;
+          padding: 80px 30px 30px 72px;
         }
       }
 
@@ -172,28 +176,39 @@
   }
 
   &--center {
-    background-image: url(../img/promo-img2.jpg);
-    background-position: center bottom;
+    background-image: url(../img/promo-img2-mobile.jpg);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: 0px 105px;
+    padding-bottom: 193px;
 
-    @media(max-width: $screen-lg){
-      background-image: none;
+    @media(max-width: $screen-sm){
+    }
+    @media(min-width: $screen-sm){
+      background-image: url(../img/promo-img2.jpg);
+      background-size: contain;
+      background-position: bottom;
+      padding-bottom: 350px;
+    }
+    @media(min-width: $screen-lg){
+      padding-bottom: 0;
+
     }
 
     #{$block-name} {
       &__description {
-        max-width: 260px;
         text-align: center;
         margin: 0 auto;
-        padding: 39px 0px 130px 0px;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
 
-        @media(max-width: $screen-lg){
-          padding: 30px 0px 30px 0px;
+        @media(min-width: $screen-md){
+
         }
-        @media(max-width: $screen-md) {
-          max-width: 100%;
-          padding: 20px;
+        @media(min-width: $screen-lg){
+          max-width: 260px;
+          padding: 39px 0px 130px 0px;
         }
       }
     }
@@ -201,8 +216,11 @@
 
   &--mini {
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 41px;
 
+    @media(min-width: $screen-lg){
+      padding-bottom: 20px;
+    }
 
     #{$block-name} {
       &__description {
@@ -210,22 +228,81 @@
       }
 
       &__img {
-        height: 231px;
+        height: 224px;
         display: flex;
         align-items: center;
         text-align: center;
         justify-content: center;
         margin-bottom: 2px;
 
-        @media(max-width: $screen-lg){
-          height: 135px;
+        @media(min-width: $screen-lg){
+          height: 231px;
         }
 
         img {
+          height: auto;
+          max-width: 180px;
+          max-height: 100%;
+
+          @media(min-width: $screen-lg){
+            height: auto;
+            max-width: 100%;
+          }
+        }
+      }
+
+      &__title {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 16px !important;
+
+        @media(min-width: $screen-lg){
+
+        }
+      }
+
+      &__text {
+        p {
+          font-size: 14px;
+          line-height: 17px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &--mini2 {
+
+    @media(min-width: $screen-md){
+
+    }
+    @media(min-width: $screen-lg){
+      padding: 92px 30px 20px 302px;
+    }
+
+    #{$block-name} {
+      &__description {
+        width: 100%;
+      }
+
+      &__img {
+        height: 135px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 2px;
+
+        @media(min-width: $screen-lg){
+          height: 231px;
+        }
+
+        img {
+          height: 100px;
           max-height: 100%;
 
           @media(max-width: $screen-lg){
-            height: 100px;
+            height: auto;
           }
         }
       }
@@ -236,28 +313,31 @@
         margin-bottom: 16px;
       }
 
-      p {
-        font-size: 14px;
-        line-height: 17px;
-        margin: 0;
+      &__text {
+        p {
+          font-size: 14px;
+          line-height: 17px;
+          margin: 0;
+        }
       }
     }
   }
 
   &--main2 {
-    background-image: url(../img/promo-img4.jpg);
+    padding: 305px 20px 1px 20px !important;
+    background-image: url(../img/promo-img4-mobile.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: left center;
-    padding: 92px 30px 20px 302px;
+    background-position: top center;
+    text-align: left !important;
 
-    @media(max-width: $screen-lg){
-      padding-top: 30px;
-      padding-left: 250px;
+    @media(min-width: $screen-md){
+      background-image: url(../img/promo-img4.jpg);
+      padding: 50px 30px 40px 302px !important;
+      background-position: left center;
     }
-    @media(max-width: $screen-md) {
-      background-image: none;
-      padding: 20px !important;
+    @media(min-width: $screen-lg){
+      padding: 92px 30px 20px 302px !important;
     }
 
     #{$block-name} {
@@ -274,31 +354,37 @@
   }
 
   &--main3 {
-    height: 233px;
-    padding: 39px 255px;
+    padding: 220px 20px 232px 20px;
     text-align: center;
 
-    @media(max-width: $screen-lg){
-      padding-top: 30px;
-      padding-bottom: 30px;
+    @media(min-width: $screen-md){
+
     }
-    @media(max-width: $screen-md) {
-      padding: 20px;
+    @media(min-width: $screen-lg){
+      padding: 39px 255px;
+      height: 233px;
     }
 
     &:before, &:after {
       content: '';
+      //display: none;
       position: absolute;
       top: 0;
-      height: 100%;
-      width: 260px;
-      background-size: cover !important;
-      background-position: left center !important;
+      height: 220px;
+      width: 100%;
+      background-size: contain !important;
       background-repeat: no-repeat !important;
+      background-position: top !important;
       z-index: 0;
+      transform: scale(-1, 1);
 
-      @media(max-width: $screen-md) {
-        display: none;
+      @media(min-width: $screen-lg){
+        height: 100%;
+        width: 260px;
+        background-size: cover !important;
+        background-position: left center !important;
+        background-repeat: no-repeat !important;
+        transform: none;
       }
     }
 
@@ -310,6 +396,21 @@
     &:after {
       right: 15px;
       background: url("../img/promo-img6.jpg");
+      top: auto;
+      bottom: 0;
+
+      @media(min-width: $screen-lg){
+        bottom: auto;
+        top: 0;
+      }
+    }
+
+    .promo-link {
+      top: -9px;
+
+      @media(min-width: $screen-lg){
+        top: auto;
+      }
     }
 
     #{$block-name} {
@@ -335,11 +436,16 @@
       &__img {
         display: flex;
         align-items: center;
-        padding: 34px 0px;
+        padding: 26px 0px;
         margin-bottom: 1px;
+
+        @media(min-width: $screen-lg){
+          padding: 34px 0px;
+        }
 
         img {
           margin: 0 auto;
+          width: auto;
           max-width: 100%;
           max-height: 180px;
         }
@@ -352,12 +458,18 @@
       &__title {
         display: inline-block;
         font-size: 17px;
+        color: #333333;
+        font-weight: 400;
+        text-transform: inherit;
+        min-height: auto;
         line-height: 19px;
-        min-height: 38px;
-        margin-bottom: 10px;
+        //margin-bottom: 10px !important;
 
-        @media(max-width: $screen-lg){
+        @media(min-width: $screen-lg){
           line-height: normal;
+          color: #c79b38;
+          font-size: 17px;
+          min-height: 38px;
         }
       }
 
@@ -368,6 +480,7 @@
   }
 
   &--simple {
+
     &:hover {
       box-shadow: none;
     }

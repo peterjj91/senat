@@ -8,6 +8,11 @@
   outline: none !important;
 
   &--simple {
+
+    @media(max-width: $screen-lg - 1){
+      width: 100% !important;
+    }
+
     .dropdown-toggle {
       //padding: 0;
       background-color: transparent;

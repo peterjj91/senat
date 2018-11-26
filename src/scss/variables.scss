@@ -930,6 +930,13 @@ $container-xxl:               $screen-xxl - 30;
 
 $breadcrumb-divider: quote(">");
 
+.container {
+  @media(max-width: $screen-lg){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 // Модульная сетка
 
 $grid-columns:                24;

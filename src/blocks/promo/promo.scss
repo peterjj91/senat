@@ -6,20 +6,32 @@
 
   $block-name: &; // #{$block-name}__element {}
 
+  @media(max-width: $screen-lg){
+
+  }
+
   &__wrapper {
 
   }
 
   &__row {
     @include make-row();
-    margin: 0px -15px;
+    margin: 0px -20px;
+
+    @media(min-width: $screen-lg){
+      margin: 0px -15px;
+    }
   }
 
   &__block {
     float: left;
     width: 100%;
-    padding: 0px 15px;
-    margin-bottom: 29px;
+    margin-bottom: 10px;
+
+    @media(min-width: $screen-lg) {
+      padding: 0px 15px;
+      margin-bottom: 29px;
+    }
 
     &--half {
       width: 50%;
@@ -48,19 +60,29 @@
 
   &__title {
     text-align: center;
-    margin-bottom: 21px;
+    margin-bottom: 11px;
+
+    @media(min-width: $screen-lg){
+      margin-bottom: 21px;
+    }
   }
 
   &--popular {
     #{$block-name} {
       &__block {
-        margin-bottom: 42px;
+        margin-bottom: 11px;
+
+        @media(min-width: $screen-lg){
+          margin-bottom: 42px;
+        }
       }
     }
   }
 
   &--main {
-    padding-top: 14px;
+    @media(min-width: $screen-lg){
+      padding-top: 14px;
+    }
   }
 
 }

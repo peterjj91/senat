@@ -4,9 +4,15 @@
 
 .page-header {
   $block-name: &;
-  border-bottom: 1px solid #e5e5e5;
   position: relative;
   background-color: #fff;
+
+  @media(max-width: $screen-lg){
+    padding-top: 20px;
+  }
+  @media(min-width: $screen-lg){
+    border-bottom: 1px solid #e5e5e5;
+  }
 
   &:after {
     content: '';
@@ -25,55 +31,161 @@
   }
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @media(min-width: $screen-lg){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__top {
     #{$block-name} {
       &__inner {
-        height: 139px;
+        height: 125px;
 
-        @media(max-width: $screen-lg){
-          height: 60px;
+        @media(min-width: $screen-lg){
+          height: 139px;
         }
       }
     }
   }
 
   &__burger {
-    display: none;
+    vertical-align: baseline !important;
+    margin-right: 0px;
 
-    @media(max-width: $screen-lg){
-      display: block;
+    @media(min-width: $screen-lg){
+      display: none;
     }
   }
 
   &__bottom {
+    height: 60px;
+    border-top: 1px solid #f1f1f1;
+    position: relative;
+
     @media(max-width: $screen-lg){
+
+    }
+    @media(max-width: $screen-xl){
+
+    }
+    @media(min-width: $screen-lg){
+      height: 50px;
+    }
+    @media(min-width: $screen-xl){
+      height: 60px;
+    }
+
+    #{$block-name} {
+      &__container {
+        height: 100%;
+      }
+    }
+  }
+
+  &__mobile-menu {
+    display: flex;
+    height: 100%;
+    position: static;
+    padding: 0;
+    //justify-content: end;
+    justify-content: space-between;
+    background-color: transparent !important;
+
+    @media(min-width: $screen-lg){
       display: none;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #f1f1f1;
+    }
+
+    .navbar-collapse {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      margin: 0px;
+      //margin: 0px -20px 0px -20px;
+      background-color: #fff;
+      z-index: 2;
+    }
+
+    .navbar-brand {
+      font-size: 18px;
+      height: 100%;
+      padding: 15px 0px;
+      margin: 0px 0px 0px 0px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .navbar-nav {
+      .nav-link {
+        //padding: 0px 20px;
+        padding: 0;
+        letter-spacing: -0.8px;
+
+        &__inner {
+          display: block;
+          position: relative;
+          font-size: 19px;
+          padding-top: 7px;
+          padding-bottom: 5px;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #f1f1f1;
+          }
+        }
+      }
+    }
+
+    .panel-group {
+      .panel {
+
+      }
     }
   }
 
   &__social {
-
+    margin-top: 7px;
   }
 
   &__description {
-    flex: 1;
-
     @media(max-width: $screen-lg){
-      display: none;
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 19px;
+    }
+    @media(min-width: $screen-lg){
+      flex: 1;
+      align-self: baseline;
+      margin-top: 40px;
     }
   }
 
   &__logo {
-    flex: 1;
     text-align: center;
 
     @media(max-width: $screen-lg){
-      flex: none;
+
+    }
+    @media(min-width: $screen-lg){
+      flex: 1;
+      //text-align: center;
     }
   }
 
@@ -84,6 +196,8 @@
 
   &__info {
     flex: 1;
+    align-self: baseline;
+    margin-top: 40px;
     text-align: right;
 
     @media(max-width: $screen-lg){
@@ -92,10 +206,26 @@
   }
 
   &__search {
-    margin-bottom: 7px;
+    margin-right: 20px;
+
+    @media(max-width: $screen-lg){
+      width: 100%;
+    }
+    @media(min-width: $screen-md){
+      max-width: 190px;
+    }
+    @media(min-width: $screen-lg){
+      margin-bottom: 6px;
+      margin-right: 0;
+    }
 
     .input {
-      width: 190px;
+      width: 100%;
+
+
+      @media(min-width: $screen-lg){
+        width: 190px;
+      }
     }
   }
 
@@ -108,55 +238,64 @@
       text-decoration: none;
     }
   }
-
-  &__bottom {
-    height: 60px;
-    border-top: 1px solid #f1f1f1;
-    //padding: 16px 0px 16px 0px;
-
-    @media(max-width: $screen-xl){
-      height: 50px;
-    }
-  }
   
   .main-nav {
     float: left;
   }
 
   &__card {
+    display: none;
     float: right;
     list-style: none;
     margin: 0;
-    padding: 14px 0px;
-    padding-right: 4px;
+    padding: 13px 0px 18px 0px;
     font-size: 18px;
+    height: 100%;
 
-    @media(max-width: $screen-xl){
-      padding: 13px 0px;
+
+    @media(min-width: $screen-lg){
+      display: inline-block;
+      padding: 14px 0px;
+      padding-right: 4px;
       font-size: 15px;
+    }
+    @media(min-width: $screen-xl){
+      font-size: 18px;
+    }
+    @media(min-width: $screen-xl){
+
     }
 
     li {
-      display: inline-block;
+      display: none;
       margin-right: 15px;
+
+      @media(min-width: $screen-lg){
+        display: inline-block;
+      }
 
       &:last-child {
         margin-right: 0;
+      }
+
+      &.active {
+        display: inline-block;
+
+        a {
+          color: $color-main--gold;
+          text-decoration: none;
+
+          & > * {
+            fill: $color-main--gold;
+          }
+        }
       }
     }
 
     a {
       color: $gray-darkest;
       text-transform: uppercase;
-
-      &:hover, &:focus {
-        color: $color-main--gold;
-        text-decoration: none;
-
-        & > * {
-          fill: $color-main--gold;
-        }
-      }
+      text-decoration: none;
 
       sup {
         font-size: 12px;
@@ -170,6 +309,14 @@
 
     &__text {
       vertical-align: middle;
+    }
+
+    .burger {
+      margin-right: -3px;
+    }
+
+    &--mobile {
+      display: inline-block;
     }
   }
 

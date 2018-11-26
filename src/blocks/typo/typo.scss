@@ -8,14 +8,14 @@ body {
 }
 
 h1, .head-h1 {
-  font-size: 30px;
   font-weight: 100;
+  font-size: 30px;
 
-  @media(max-width: $screen-xl){
-    font-size: 25px;
+  @media(min-width: $screen-md){
+
   }
-  @media(max-width: $screen-md) {
-    font-size: 20px !important;
+  @media(min-width: $screen-lg){
+
   }
 }
 
@@ -23,36 +23,36 @@ h2, .head-h2 {
   font-size: 24px;
   font-weight: 100;
 
-  @media(max-width: $screen-xl){
-    font-size: 21px;
+  @media(min-width: $screen-md){
+
   }
-  @media(max-width: $screen-md) {
-    font-size: 18px !important;
+  @media(min-width: $screen-lg){
+
   }
 }
 
 h3, .head-h3 {
-  font-size: 19px;
+  font-size: 15px;
   font-weight: 100;
 
-  @media(max-width: $screen-xl){
+  @media(min-width: $screen-md){
     font-size: 17px;
   }
-  @media(max-width: $screen-md) {
-    font-size: 15px !important;
+  @media(min-width: $screen-lg){
+    font-size: 19px;
   }
 }
 
 p {
-  font-size: 18px;
   font-weight: 100;
   line-height: 24px;
+  font-size: 18px;
 
-  @media(max-width: $screen-xl){
-    font-size: 15px;
+  @media(min-width: $screen-md){
+
   }
-  @media(max-width: $screen-md) {
-    font-size: 13px !important;
+  @media(min-width: $screen-lg){
+
   }
 }
 

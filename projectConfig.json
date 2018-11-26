@@ -29,7 +29,6 @@
     "promo-link": [],
     "promotion": [],
     "slider-brand": [],
-    "sidr": [],
     "catalog": [],
     "range-slider": [],
     "ion-rangeslider": [],
@@ -41,7 +40,8 @@
     "item-promo": [],
     "contact": [],
     "nav-adress": [],
-    "scrollbar": []
+    "scrollbar": [],
+    "panel": []
   },
   "addCssBefore": [
     "./node_modules/bootstrap/scss/bootstrap.scss",
@@ -62,7 +62,6 @@
     "./node_modules/bootstrap/dist/js/bootstrap.js",
     "./node_modules/object-fit-images/dist/ofi.js",
     "./node_modules/slick-carousel/slick/slick.js",
-    "./node_modules/sidr/dist/jquery.sidr.js",
     "./node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "./node_modules/bootstrap-select/dist/js/bootstrap-select.js",
     "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",

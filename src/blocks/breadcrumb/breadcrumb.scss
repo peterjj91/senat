@@ -14,7 +14,11 @@ $breadcrumb-divider: quote("&#8594;");
   background-color: transparent;
   padding: 0;
   font-size: 14px;
-  margin-bottom: 24px;
+  margin-bottom: 13px;
+
+  @media(min-width: $screen-lg){
+    margin-bottom: 24px;
+  }
 
   &-item {
     & + & {
@@ -43,9 +47,9 @@ $breadcrumb-divider: quote("&#8594;");
 }
 
 nav[aria-label="breadcrumb"] {
-  display: none;
+  //display: none;
 
   @media(min-width: $screen-lg+1){
-    display: block;
+    //display: block;
   }
 }

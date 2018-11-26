@@ -5,11 +5,23 @@
 .item-promo {
 
   $block-name:                &; // #{$block-name}__element {}
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 40px;
+
+  @media(min-width: $screen-lg){
+    margin-bottom: 0;
+    border-bottom: none;
+  }
 
   &__title {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 18px;
+    line-height: normal;
+
+    @media(min-width: $screen-lg){
+
+    }
   }
 
 }

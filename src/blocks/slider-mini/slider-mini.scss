@@ -5,40 +5,49 @@
 .slider-mini {
 
   $block-name:                &; // #{$block-name}__element {}
-  height: 360px;
+  padding-bottom: 30px;
   overflow: hidden;
 
-  @media(max-width: $screen-lg){
-    height: 260px;
+  @media(min-width: $screen-lg){
+    height: 360px;
+    padding-bottom: 0;
   }
 
   &__block {
-    display: flex !important;
-    align-items: center;
-    padding: 0px 35px;
+    padding-top: 10px;
 
-    @media(max-width: $screen-md){
-      padding: 20px 20px;
+    @media(min-width: $screen-lg){
+      display: flex !important;
+      align-items: center;
+      padding: 20px 38px 20px 30px;
     }
   }
 
   &__img {
-    //height: 100%;
-    margin-right: 20px;
-    max-width: 200px;
+    height: 215px;
 
-    @media(max-width: $screen-xl){
-      max-width: 180px;
-    }
-    @media(max-width: $screen-md){
-      display: none;
+    @media(min-width: $screen-lg){
+      display: inline-block;
+      height: auto;
+      max-width: 200px;
+      margin-right: 20px;
     }
 
     & + #{$block-name}__description {
-      text-align: right;
+      text-align: center;
 
-      @media(max-width: $screen-md){
-        text-align: center;
+      @media(min-width: $screen-lg){
+        text-align: right;
+      }
+    }
+
+    img {
+      margin: 0 auto;
+      height: 100%;
+
+      @media(min-width: $screen-lg){
+        margin: 0;
+        height: auto;
       }
     }
   }
@@ -66,7 +75,11 @@
   }
 
   .slick-dots {
-    bottom: 13px;
+    bottom: 14px;
+
+    @media(min-width: $screen-lg){
+      bottom: 26px;
+    }
   }
 
   &__description {
@@ -76,6 +89,14 @@
   &__title {
     @extend .head-h1;
     @extend .text--promo;
+    display: inline-block;
+    margin-top: 7px !important;
+    margin-bottom: 3px !important;
+
+    @media(min-width: $screen-lg){
+      margin-top: 38px !important;
+      margin-bottom: 0 !important;
+    }
 
     &:hover, &:focus {
       @extend .text--promo;

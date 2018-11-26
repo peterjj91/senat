@@ -5,27 +5,28 @@
 .page-card {
 
   $block-name: &; // #{$block-name}__element {}
-  margin-bottom: 30px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #f1f1f1;
+  margin-bottom: 18px;
 
   @media(min-width: $screen-lg){
     display: flex;
     padding: 9px 0px 0px 0px;
     margin-bottom: 14px;
+    border-bottom: none;
   }
 
   &__slider {
-    margin: 0px -15px 30px -15px;
+    margin: 0px 0px 14px 0px;
 
     @media(min-width: $screen-lg){
       display: flex;
       flex-direction: row-reverse;
-      margin: 0;
-      margin-right: 29px;
+      margin: 0px 29px 0px 0px;
     }
 
-
     &__main {
-      margin-bottom: 30px;
+      margin-bottom: 10px;
 
       @media(min-width: $screen-lg){
         margin-bottom: 0;
@@ -47,7 +48,11 @@
   }
 
   &__info {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+
+    @media(min-width: $screen-lg){
+      margin-bottom: 24px;
+    }
 
     &:last-child {
 
@@ -89,6 +94,19 @@
     line-height: 36px;
     margin-top: -6px;
     margin-bottom: 16px;
+    display: none;
+
+    @media(min-width: $screen-lg){
+      display: block;
+    }
+
+    &--mobile {
+      display: block;
+
+      @media(min-width: $screen-lg){
+        display: none;
+      }
+    }
   }
 
   &__code {
@@ -172,10 +190,15 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    margin: -5px 0px 15px 0px;
-    padding: 15px 19px 20px 19px;
+    margin: -4px 0px 15px 0px;
+    padding: 16px 19px 13px 19px;
     background: #f9f9f9;
     font-size: 15px;
+
+    @media(min-width: $screen-lg){
+      margin: -5px 0px 15px 0px;
+      padding: 15px 19px 20px 19px;
+    }
 
     li {
       width: 100%;
