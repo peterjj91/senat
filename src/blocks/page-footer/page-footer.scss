@@ -61,29 +61,30 @@
 
     @media(max-width: $screen-lg){
       margin: 0;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
   }
 
   &__nav {
     white-space: nowrap;
     padding-top: 2px;
+    margin-bottom: 20px;
 
     @media(max-width: $screen-lg){
       padding-top: 0px;
       width: 100%;
       white-space: normal;
-      margin-bottom: 10px;
+      //margin-bottom: 10px;
     }
 
     &__block {
       display: inline-block;
       vertical-align: top;
-      width: 208px;
+      width: 100%;
+      margin-bottom: 10px;
 
-      @media(max-width: $screen-lg){
-        width: 100%;
-        margin-bottom: 10px;
+      @media(min-width: $screen-lg){
+        width: 208px;
       }
 
       &:last-child {
@@ -106,10 +107,12 @@
     ul {
       padding: 0;
       list-style: none;
-      font-size: 18px;
+      font-size: 15px;
+      margin-bottom: 0;
 
-      @media(max-width: $screen-xl){
-        font-size: 15px;
+      @media(min-width: $screen-xl){
+        font-size: 18px;
+        margin-bottom: 1rem;
       }
 
       li {
