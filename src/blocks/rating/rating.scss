@@ -1,0 +1,39 @@
+// В этом файле должны быть стили для БЭМ-блока rating, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.rating {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  .stars {
+    .star {
+      padding-right: 3px;
+      cursor: pointer;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:before {
+        font-family: 'FontAwesome';
+        content: '\f005';
+        color: #e8e8e8;
+        font-size: 19px;
+      }
+
+      &:hover:before,
+      &.to_rate:before,
+      &.rated:before {
+        color: #c69833;
+      }
+
+      &.no_to_rate:before {
+        color: #e8e8e8;
+      }
+    }
+  }
+
+  &--none {
+  }
+}

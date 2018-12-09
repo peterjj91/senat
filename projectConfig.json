@@ -41,10 +41,21 @@
     "contact": [],
     "nav-adress": [],
     "scrollbar": [],
-    "panel": []
+    "panel": [],
+    "news-promo": [],
+    "news-card": [],
+    "list": [],
+    "review-promo": [],
+    "progress": [],
+    "rating": [],
+    "form-promo": [],
+    "cart-promo": [],
+    "cart-checkout": [],
+    "discount-promo": []
   },
   "addCssBefore": [
     "./node_modules/bootstrap/scss/bootstrap.scss",
+    "./node_modules/font-awesome/scss/font-awesome.scss",
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
     "../../node_modules/slick-carousel/slick/slick.scss",

@@ -1,0 +1,81 @@
+// В этом файле должны быть стили для БЭМ-блока news-promo, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.news-promo {
+
+  $block-name:                &; // #{$block-name}__element {}
+  margin-top: -11px;
+
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__list {
+    @include make-row;
+
+    &__item {
+      @include make-col(24);
+      padding: 0px 15px;
+      margin-bottom: 66px;
+
+      @media(min-width: $screen-md){
+        @include make-col(12);
+      }
+      @media(min-width: $screen-lg){
+        @include make-col(8);
+      }
+      @media(min-width: $screen-xl){
+        @include make-col(6);
+      }
+    }
+  }
+
+  &__item {
+    &__img {
+      display: block;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 14px;
+      background-size: cover;
+      background-position: center;
+
+      &:before {
+        content: "";
+        display: block;
+        margin-top: 100%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__description {
+      text-align: center;
+      padding: 0px 10px;
+    }
+
+    &__date {
+      font-size: 16px;
+      color: #999999;
+      letter-spacing: -1px;
+      margin-bottom: 11px;
+    }
+
+    &__title {
+      display: inline-block;
+      font-size: 17px;
+      line-height: 19px;
+      letter-spacing: -0.5px;
+      color: #333333;
+      text-decoration: none;
+
+      &:hover, &:focus {
+        color: #333333;
+        text-decoration: none;
+      }
+    }
+  }
+}

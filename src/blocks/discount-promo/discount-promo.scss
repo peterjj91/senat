@@ -1,0 +1,41 @@
+// В этом файле должны быть стили для БЭМ-блока discount-promo, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.discount-promo {
+
+  $block-name:                &; // #{$block-name}__element {}
+  display: inline-block;
+  height: 25px;
+  position: relative;
+  background: #c2185b;
+  color: white;
+  padding: 1px 2px;
+  font-size: 16px;
+  line-height: 23px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    transform: scale(-1);
+    top: 0;
+    left: -10px;
+    width: 10px;
+    height: 100%;
+    border-style: solid;
+    border-width: 25px 10px 0 0;
+    border-color: #c2185b transparent transparent transparent;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 10px;
+    height: 100%;
+    border-style: solid;
+    border-width: 25px 10px 0 0;
+    border-color: #c2185b transparent transparent transparent;
+  }
+}

@@ -8,9 +8,12 @@
   outline: none !important;
 
   &--simple {
-
     @media(max-width: $screen-lg - 1){
       width: 100% !important;
+    }
+
+    &.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+      width: auto;
     }
 
     .dropdown-toggle {
@@ -30,6 +33,7 @@
       &:after {
         content: "";
         border: none;
+        display: inline-block;
         transform: rotate(-90deg);
         margin-top: 5px;
         margin-right: 3px;
@@ -38,6 +42,11 @@
         background-repeat: no-repeat;
         width: 7px;
         height: 13px;
+        margin-left: -10px;
+
+        @media(min-width: $screen-md){
+
+        }
       }
 
       &:focus {
@@ -50,13 +59,16 @@
       }
 
       .filter-option {
+        display: inline-block;
+        position: relative;
+        padding: 0;
 
         @media(min-width: $screen-md){
           text-align: right;
         }
 
         &-inner {
-          padding-right: 17px;
+          padding-right: 20px;
 
           &-inner {
             display: inline-block;

@@ -1,0 +1,165 @@
+// В этом файле должны быть стили для БЭМ-блока cart-checkout, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.cart-checkout {
+
+  $block-name: &; // #{$block-name}__element {}
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 19px 0px 15px 0px;
+    border-top: 1px solid #f1f1f1;
+
+    @media(min-width: 992px){
+      //align-items: center;
+      padding: 19px 0px;
+    }
+    @media(min-width: $screen-lg){
+      flex-wrap: nowrap;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  &__img {
+    flex: 0 0 34%;
+    margin-right: 19px;
+    margin-bottom: 17px;
+
+    @media(min-width: 992px){
+      //flex-basis: 95px;
+      flex: 0 0 95px;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    //flex: 0 0 59%;
+    //flex-grow: initial;
+
+    @media(max-width: 992px){
+      flex: 0 0 59%;
+      //margin-top: 7px;
+      margin-bottom: 17px;
+    }
+    @media(min-width: 992px){
+      flex-grow: 1;
+      //flex: none;
+    }
+
+    p {
+      margin-top: -2px;
+    }
+  }
+
+  &__discount {
+    flex: 0 0 50%;
+    height: 85px;
+    text-align: center;
+    padding: 20px 0px 12px 5px;
+    background-color: #F7F7F7;
+
+    @media(min-width: 992px){
+      //flex-basis: 150px;
+      height: auto;
+      flex: 0 0 150px;
+      margin-right: 24px;
+      margin-left: 5px;
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  &__price {
+    flex: 0 0 50%;
+    text-align: center;
+    padding: 20px 0px 12px 5px;
+    background-color: #F7F7F7;
+    height: 85px;
+
+    @media(min-width: 992px){
+      //flex-basis: 90px;
+      height: auto;
+      flex: 0 0 90px;
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  &__delete {
+    flex: 0 0 100%;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 16px;
+
+    @media(min-width: 992px){
+      //flex-basis: 40px;
+      flex: 0 0 40px;
+      text-align: right;
+      margin-top: 0;
+    }
+
+    .fa {
+      vertical-align: top;
+      cursor: pointer;
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 14px;
+
+      @media(min-width: $screen-lg){
+        font-size: 0;
+      }
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    line-height: 21px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+
+    @media(min-width: 992px){
+      line-height: normal;
+      margin-bottom: 0;
+    }
+
+    &:hover, &:focus {
+      color: #333333;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: #666666;
+    font-size: 14px;
+  }
+
+  &__total {
+    color: #c79b38;
+    font-size: 19px;
+
+    &--old {
+      font-size: 15px;
+      margin-bottom: -2px;
+      color: #333333;
+      text-decoration: line-through;
+      text-decoration-color: red;
+    }
+  }
+}

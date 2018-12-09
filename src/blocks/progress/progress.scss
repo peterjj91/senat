@@ -1,0 +1,32 @@
+// В этом файле должны быть стили для БЭМ-блока progress, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.progress {
+
+  $block-name:                &; // #{$block-name}__element {}
+  border-radius: 0px;
+  height: 5px;
+
+  &-bar {
+    background-color: #c69833;
+  }
+
+  &__group {
+    &__block {
+      margin-bottom: 17px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      font-size: 15px;
+      line-height: normal;
+      margin-bottom: 6px;
+      color: #666666;
+      font-weight: 400;
+    }
+  }
+}

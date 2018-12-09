@@ -5,6 +5,7 @@
  */
 
 @import './node_modules/bootstrap/scss/bootstrap.scss';
+@import './node_modules/font-awesome/scss/font-awesome.scss';
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
 @import '../../node_modules/slick-carousel/slick/slick.scss';
@@ -53,3 +54,13 @@
 @import './src/blocks/nav-adress/nav-adress.scss';
 @import './src/blocks/scrollbar/scrollbar.scss';
 @import './src/blocks/panel/panel.scss';
+@import './src/blocks/news-promo/news-promo.scss';
+@import './src/blocks/news-card/news-card.scss';
+@import './src/blocks/list/list.scss';
+@import './src/blocks/review-promo/review-promo.scss';
+@import './src/blocks/progress/progress.scss';
+@import './src/blocks/rating/rating.scss';
+@import './src/blocks/form-promo/form-promo.scss';
+@import './src/blocks/cart-promo/cart-promo.scss';
+@import './src/blocks/cart-checkout/cart-checkout.scss';
+@import './src/blocks/discount-promo/discount-promo.scss';

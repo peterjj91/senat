@@ -99,6 +99,46 @@ $border-radius:               3px !default;
       border-color: #ecf0f1;
     }
   }
+
+  &-outline-primary {
+    background-color: white;
+    border: 2px solid $color-main--gold;
+    color: $color-main--gold;
+    border-radius: 0px;
+
+    &:focus, &.focus {
+      background-color: $color-main--gold;
+      border-color: $color-main--gold;
+      color: white;
+      box-shadow: 0 0 0 0.2rem rgba(199, 155, 56, 0.5);
+    }
+
+    @include hover-focus {
+      background-color: $color-main--gold;
+      border-color: $color-main--gold;
+      color: white;
+    }
+
+    &.active {
+      background-color: $color-main--gold;
+      border-color: $color-main--gold;
+      color: white;
+    }
+
+    &:not(:disabled):not(.disabled) {
+
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+      background-color: $color-main--gold;
+      border-color: $color-main--gold;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(199, 155, 56, 0.5);
+      }
+    }
+  }
 }
 
 

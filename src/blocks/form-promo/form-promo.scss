@@ -1,0 +1,36 @@
+// В этом файле должны быть стили для БЭМ-блока form-promo, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.form-promo {
+
+  $block-name:                &; // #{$block-name}__element {}
+
+  label {
+
+  }
+
+  &__block {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--rating {
+    .form {
+      &-group {
+        margin-bottom: 8px;
+      }
+    }
+
+    label {
+      margin-bottom: 2px;
+
+      @media(min-width: $screen-lg){
+        letter-spacing: -0.7px;
+      }
+    }
+  }
+}
